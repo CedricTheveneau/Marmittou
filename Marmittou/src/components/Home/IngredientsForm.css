@@ -1,0 +1,73 @@
+form {
+  display: flex;
+  width: 50%;
+  margin: auto;
+  flex-direction: column;
+  gap: 25px;
+  > .IngredientsformLine {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    > label {
+      font-size: 14px;
+      font-weight: 800;
+    }
+    > input,
+    select,
+    div:has(input[type="checkbox"]),
+    textarea {
+      border: transparent;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #000000;
+      padding: 10px;
+      box-shadow: 10px 10px 0px #dcd8d8;
+      transition: box-shadow 250ms ease-in-out;
+    }
+    > input:focus,
+    input:hover,
+    select:focus,
+    select:hover,
+    div:has(input[type="checkbox"]):hover,
+    textarea:hover,
+    textarea:focus {
+      box-shadow: 0px 0px 0px #dcd8d8;
+    }
+    > input::placeholder {
+      font-size: 12px;
+      font-weight: 700;
+      color: #000000;
+    }
+    > textarea {
+      resize: vertical;
+    }
+    > div:has(input[type="checkbox"]) {
+      margin: 5px 0px;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      gap: 5px;
+      background-color: #ffffff;
+      cursor: pointer;
+      > input[type="checkbox"] {
+        cursor: pointer;
+      }
+    }
+    > button {
+      border: transparent;
+      background-color: #ffffff;
+      font-size: 15px;
+      font-weight: 900;
+      padding: 10px;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 10px 10px 0px #dcd8d8;
+      transition: box-shadow 250ms ease-in-out;
+    }
+    > button:hover,
+    button:focus {
+      box-shadow: 0px 0px 0px #dcd8d8;
+    }
+  }
+}

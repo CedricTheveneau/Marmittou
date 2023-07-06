@@ -1,0 +1,91 @@
+.navbar {
+  display: flex;
+  padding: 10px 5%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f6f6f8;
+  box-shadow: 0px 5px #dcd8d8;
+}
+
+.navbar p {
+  margin: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #000000;
+  text-shadow: 5px 5px #dcd8d8;
+  transition: color 350ms ease-in-out, text-shadow 250ms ease-in-out;
+}
+
+.navbar svg {
+  fill: #000000;
+  transition: fill 350ms ease-in-out;
+}
+
+.navbar svg:hover,
+#basket.active {
+  fill: #00000080;
+}
+
+.navbar a:hover {
+  color: #00000080;
+  text-shadow: 0px 0px #dcd8d8;
+}
+
+.logo {
+  width: 20%;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoWrapper:hover h1 {
+  color: #00000080;
+}
+
+.logoWrapper:hover .logoCircle {
+  background-color: #00000080;
+}
+
+.logoWrapper > .logoCircle {
+  width: 20px;
+  aspect-ratio: 1;
+  background-color: #000000;
+  border-radius: 50%;
+  transition: background-color 250ms ease-in-out;
+}
+
+.logo h1 {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 900;
+  margin: 0%;
+  transition: color 350ms;
+}
+
+.searchbar {
+  width: 50%;
+}
+
+.sections,
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.sections {
+  width: 20%;
+  gap: 10px;
+  justify-content: end;
+  font-weight: 900;
+}
+
+.icons {
+  width: 15%;
+  justify-content: center;
+  gap: 15px;
+}

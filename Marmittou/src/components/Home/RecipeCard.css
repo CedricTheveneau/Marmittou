@@ -1,0 +1,122 @@
+a:has(.recipeCardWrapper) {
+  text-decoration: none;
+  color: #000000;
+  .recipeCardWrapper {
+    max-width: 300px;
+    box-shadow: 10px 10px #00000080;
+    border-radius: 10px;
+    transition: box-shadow 250ms ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+    > img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
+    > .cardContent {
+      padding: 10px;
+      > h3 {
+        font-size: 22px;
+        font-weight: 900;
+      }
+      > p {
+        font-size: 15px;
+        font-weight: 600;
+        margin: 5px 0px 15px 0px;
+        > .difficultySpan {
+          text-transform: capitalize;
+        }
+      }
+      > .ingredients {
+        display: grid;
+        gap: 5px;
+        font-size: 12px;
+      }
+      > .tags {
+        margin-block: 10px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        > .tagSpan {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-transform: capitalize;
+          font-size: 12px;
+          font-weight: 900;
+          color: #ffffff;
+          padding: 7px 10px;
+          background-color: #db7d7d;
+          border-radius: 50px;
+        }
+      }
+      > .steps {
+        display: grid;
+        gap: 5px;
+        font-size: 12px;
+      }
+    }
+  }
+  .recipeCardWrapper:hover {
+    box-shadow: 0px 0px #00000080;
+  }
+}
+.recipeCardWrapper {
+  max-width: 300px;
+  box-shadow: 10px 10px #00000080;
+  border-radius: 10px;
+  transition: box-shadow 250ms ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+  > img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+  > .cardContent {
+    padding: 10px;
+    > h3 {
+      font-size: 22px;
+      font-weight: 900;
+    }
+    > p {
+      font-size: 15px;
+      font-weight: 600;
+      margin: 5px 0px 15px 0px;
+      > .difficultySpan {
+        text-transform: capitalize;
+      }
+    }
+    > .ingredients {
+      display: grid;
+      gap: 5px;
+      font-size: 12px;
+    }
+    > .tags {
+      margin-block: 10px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      > .tagSpan {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: capitalize;
+        font-size: 12px;
+        padding: 7px 10px;
+        font-weight: 900;
+        color: #ffffff;
+        background-color: #db7d7d;
+        border-radius: 50px;
+      }
+    }
+    > .steps {
+      display: grid;
+      gap: 5px;
+      font-size: 12px;
+    }
+  }
+}
+.recipeCardWrapper:hover {
+  box-shadow: 0px 0px #00000080;
+}
