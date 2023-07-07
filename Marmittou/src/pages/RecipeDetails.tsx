@@ -30,7 +30,7 @@ const RecipeDetails = () => {
   }, [recipes]);
 
   return (
-    <div className="recipeCardWrapper">
+    <div className="recipeCardWrapperDetails">
       <img src={recipeDetails?.url} alt={recipeDetails?.title} />
       <div className="cardContent">
         <h3>{recipeDetails?.title}</h3>
@@ -41,11 +41,38 @@ const RecipeDetails = () => {
           </span>
           |{recipeDetails?.publishDate}
         </p>
-        <p>
-          {recipeDetails?.ingredients.length} ingredients - {portion} personnes
-        </p>
-        <button onClick={() => setPortion(portion! + 1)}>+</button>
-        <button onClick={() => setPortion(portion! - 1)}>-</button>
+        <div className="tags">
+          {recipeDetails?.tag.map((tag: string, i: number) => {
+            return (
+              <span className="tagSpan" key={i}>
+                {tag}
+              </span>
+            );
+          })}
+          {recipeDetails?.customTags.map((tag: string, i: number) => {
+            return (
+              <span className="tagSpan" key={i}>
+                {tag}
+              </span>
+            );
+          })}
+        </div>
+        <div className="portionManagement">
+          <button
+            className="portionManager"
+            onClick={() => setPortion(portion! - 1)}
+          >
+            -
+          </button>
+          <p>{portion} pers.</p>
+          <button
+            className="portionManager"
+            onClick={() => setPortion(portion! + 1)}
+          >
+            +
+          </button>
+        </div>
+        <p>{recipeDetails?.ingredients.length} ingredients :</p>
         <div className="ingredients">
           {recipeDetails?.ingredients.map(
             (ingredient: Ingredient, i: number) => {
@@ -69,23 +96,8 @@ const RecipeDetails = () => {
             }
           )}
         </div>
-        <div className="tags">
-          {recipeDetails?.tag.map((tag: string, i: number) => {
-            return (
-              <span className="tagSpan" key={i}>
-                {tag}
-              </span>
-            );
-          })}
-          {recipeDetails?.customTags.map((tag: string, i: number) => {
-            return (
-              <span className="tagSpan" key={i}>
-                {tag}
-              </span>
-            );
-          })}
-        </div>
         <div className="steps">
+          <p>Steps :</p>
           {recipeDetails?.steps.map((step: string, i: number) => {
             return (
               <span className="stepSpan" key={i}>
