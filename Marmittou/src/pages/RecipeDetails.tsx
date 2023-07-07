@@ -35,11 +35,11 @@ const RecipeDetails = () => {
       <div className="cardContent">
         <h3>{recipeDetails?.title}</h3>
         <p>
-          {recipeDetails?.prepTime} min |
+          {recipeDetails?.prepTime} min |&nbsp;
           <span style={{ textTransform: "capitalize" }}>
             {Difficulty[recipeDetails?.difficulty ?? 0].toLowerCase()}
           </span>
-          |{recipeDetails?.publishDate}
+          &nbsp;|&nbsp;{recipeDetails?.publishDate}
         </p>
         <div className="tags">
           {recipeDetails?.tag.map((tag: string, i: number) => {
@@ -76,14 +76,14 @@ const RecipeDetails = () => {
         <div className="ingredients">
           {recipeDetails?.ingredients.map(
             (ingredient: Ingredient, i: number) => {
-              console.log("ingredient.quantity " + ingredient.quantity);
-              console.log("portion " + portion);
-              console.log("recipeDetails " + recipeDetails.portion);
-              console.log(
-                Math.round(
-                  ingredient.quantity * (portion! / recipeDetails.portion)
-                )
-              );
+              // console.log("ingredient.quantity " + ingredient.quantity);
+              // console.log("portion " + portion);
+              // console.log("recipeDetails " + recipeDetails.portion);
+              // console.log(
+              //   Math.round(
+              //     ingredient.quantity * (portion! / recipeDetails.portion)
+              //   )
+              // );
               return (
                 <div className="ingredientDiv" key={i}>
                   {ingredient.name} -{" "}

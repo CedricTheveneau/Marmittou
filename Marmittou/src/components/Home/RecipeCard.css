@@ -108,7 +108,8 @@ a:has(.recipeCardWrapper) {
         background-color: #ffffff;
         font-size: 12px;
         font-weight: 900;
-        padding: 7px 10px;
+        width: 30px;
+        aspect-ratio: 1;
         border-radius: 50px;
         cursor: pointer;
         box-shadow: 5px 5px 0px #dcd8d8;
